@@ -1,0 +1,9 @@
+# data folder
+factorio/
+saves/
+
+# test docker mountpount
+docker-data/
+
+# factorio compressed binaries
+*.tar.xz

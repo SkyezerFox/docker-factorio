@@ -1,0 +1,6 @@
+# data folder
+factorio/
+saves/
+
+# factorio compressed binaries
+*.tar.xz
