@@ -15,7 +15,7 @@ function has_cached_server_archive() {
 }
 
 # check if factorio data directory exists - if it doesn't, download the latest version.
-if [[ -d factorio ]]; then
+if [[ -d factorio && -f factorio/bin/x64/factorio ]]; then
     echo "UPDATER > Found pre-exisiting server data."
 else
     if ! has_cached_server_archive; then
@@ -29,8 +29,6 @@ else
     ls .
     tar -xvf "factorio_headless_x64_$FACTORIO_VERSION.tar.xz"
 fi
-
-ls -al ./factorio/bin/x64/factorio
 
 # create a new save if one does not exist.
 if [[ ! -f "./saves/$FACTORIO_SAVE_NAME.zip" ]]; then
